@@ -1,12 +1,6 @@
 package echo;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -35,7 +29,7 @@ public class Server {
 			Socket socket = serverSocket.accept(); //연결
 			System.out.println("[클라이언트가 연결되었습니다.]");
 			
-			Thread st = new ServerThread();
+			Thread st = new ServerThread(socket);
 			st.start();
 			
 			//////////////////////////////////

@@ -25,7 +25,7 @@ public class Client {
 		//서버에 연결 요청
 		//ip 192.168.0.27  	port 10001
 		System.out.println("[서버에 연결을 요청합니다.]");
-		socket.connect(new InetSocketAddress("192.168.0.27", 10001));
+		socket.connect(new InetSocketAddress("192.168.0.96", 10001));
 		
 		//쓰기 스트림 준비 
 		//OutputStream out = new FileOutputStream("C:\\javaStudy\\MS949-copy.txt");
@@ -58,7 +58,7 @@ public class Client {
 			}
 			
 			//메세지를 보내기
-			bw.write(msg);
+			bw.write("강수빈: " + msg);
 			bw.newLine();
 			bw.flush(); //꽉 안 채워도 넘기는
 			
