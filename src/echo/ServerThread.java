@@ -25,9 +25,8 @@ public class ServerThread extends Thread{
 
 	
 	//메소드 gs
-	//메소드 일반
 	
-
+	//메소드 일반
 	@Override
 	public void run() {
 		
@@ -63,12 +62,12 @@ public class ServerThread extends Thread{
 			}
 			//--------------------------------------------------
 			
-		} catch (IOException e) {
+		}catch (IOException e) {
 			System.out.println(e.toString());
 		}
 
 	
-	}
+	}//run
 
 	
 }
